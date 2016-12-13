@@ -48,7 +48,7 @@ public class PraiseAnimatorManager {
 
 
         final ImageView target = new ImageView(context);
-        target.setImageResource(R.mipmap.ic_launcher);
+        target.setImageResource(android.R.drawable.btn_star_big_on);
 
         int[] location = new int[2];
         anchorView.getLocationInWindow(location);

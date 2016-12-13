@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.joke.animatordemo.anim.PraiseAnimatorManager;
+import com.joke.animatordemo.fragment.SendGiftFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    private View tv;
+    private View fly_star;
+    private View send_gift;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,14 +18,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        tv = findViewById(R.id.tv);
+        fly_star = findViewById(R.id.fly_star);
+        send_gift = findViewById(R.id.send_gift);
 
-        final PraiseAnimatorManager manager = new PraiseAnimatorManager(this,tv);
+
+        final PraiseAnimatorManager manager = new PraiseAnimatorManager(this, fly_star);
         manager.setDistance(2000);
-        tv.setOnClickListener(new View.OnClickListener() {
+        fly_star.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 manager.fly();
+            }
+        });
+
+        send_gift.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().beginTransaction().addToBackStack("gift").add(android.R.id.content, SendGiftFragment.newInstance()).commit();
             }
         });
 

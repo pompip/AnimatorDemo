@@ -11,10 +11,17 @@
     tools:context="com.joke.animatordemo.MainActivity">
 
     <TextView
-        android:id="@+id/tv"
+        android:id="@+id/send_gift"
+        android:text="send gift animator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/fly_star"
+        android:padding="10dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="fly star animator" />
+
 </RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_send_gift"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView
+            android:padding="2dp"
+            android:id="@+id/gift0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/chocolate" />
+
+        <ImageView
+            android:padding="2dp"
+            android:id="@+id/gift1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/cake" />
+
+        <ImageView
+            android:padding="2dp"
+            android:id="@+id/gift2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/diamond" />
+
+        <ImageView
+            android:padding="2dp"
+            android:id="@+id/gift3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/car" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/sv_send_gift_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_send_gift"
+        android:layout_alignParentTop="true"
+        android:background="#55000000"
+        android:orientation="vertical"
+        android:paddingTop="49dp">
+
+        <LinearLayout
+            android:id="@+id/animator_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
