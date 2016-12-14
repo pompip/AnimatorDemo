@@ -9,3 +9,4 @@
 ## 仿直播平台送礼物动画
 * 利用handler 延迟发送结束和叠加动画命令
 * 组合translation scale alpha 动画
+* 利用layoutTransition 简化逻辑

@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="gift"
+            type="com.joke.animatordemo.bean.GiftBean"/>
+    </data>
+
+<LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
+    android:animateLayoutChanges="true"
     android:layout_margin="10dp"
     android:gravity="center_vertical">
 
@@ -30,6 +38,7 @@
             android:layout_height="wrap_content"
             android:textColor="#fe6060"
             android:textSize="12sp"
+            android:text="@{gift.name}"
             tools:text="喜欢" />
     </LinearLayout>
 
@@ -39,6 +48,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="-15dp"
+        android:src="@{gift.picture}"
         tools:src="@mipmap/ic_launcher" />
 
     <TextView
@@ -48,8 +58,11 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:padding="5dp"
-        android:text="X1"
+        android:text="@{`X`+gift.giftNum}"
         android:textColor="#fe6060"
         android:textSize="15sp" />
 
 </LinearLayout>
+
+
+</layout>

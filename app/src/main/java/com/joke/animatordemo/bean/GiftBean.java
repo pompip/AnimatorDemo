@@ -1,13 +1,15 @@
 package com.joke.animatordemo.bean;
 
+import android.databinding.BaseObservable;
 import android.support.annotation.DrawableRes;
 
 /**
  * Created by lkc on 2016/8/19.
  */
-public class GiftBean {
+public class GiftBean extends BaseObservable{
     public int giftid;
     public String name;
+    private int giftNum = 1;
     public
     @DrawableRes
     int picture;
@@ -40,5 +42,14 @@ public class GiftBean {
 
     public int getGiftid() {
         return giftid;
+    }
+
+    public int getGiftNum() {
+        return giftNum;
+    }
+
+    public void setGiftNum(int giftNum) {
+        this.giftNum = giftNum;
+        notifyChange();
     }
 }
