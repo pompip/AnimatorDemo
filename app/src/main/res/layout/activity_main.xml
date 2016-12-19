@@ -37,4 +37,13 @@
         android:layout_height="wrap_content"
         android:text="fly star animator" />
 
+    <TextView
+        android:id="@+id/tv_ani"
+        android:textSize="30sp"
+        android:text="start"
+        android:textColor="#e2e210"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>
