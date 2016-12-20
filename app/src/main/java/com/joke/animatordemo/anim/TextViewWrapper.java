@@ -70,24 +70,25 @@ public class TextViewWrapper {
     public void startAni(char[] end) {
         char[] start = new char[end.length];
         for (int i = 0; i < start.length; i++) {
-            start[i] = 'a';
+            start[i] = 'A';
         }
         PropertyValuesHolder charHolder = PropertyValuesHolder.ofObject("text", new CharEvaluator(), start, end);
         ObjectAnimator objectAnimator = ObjectAnimator.ofPropertyValuesHolder(this, charHolder);
         objectAnimator.setDuration(2000);
-        objectAnimator.setInterpolator(new DecelerateInterpolator());
         objectAnimator.start();
     }
 
 
     private class CharEvaluator implements TypeEvaluator<char[]> {
-
+        int max = 0;
         @Override
         public char[] evaluate(float fraction, char[] startValue, char[] endValue) {
+
             int length = endValue.length;
             char[] chars = new char[length];
             for (int i = 0; i < length; i++) {
-                chars[i] = (char) (startValue[i] + (endValue[i] - startValue[i]) * fraction);
+                max = Math.max(max,endValue[i]);
+                chars[i] =(char) Math.min( (startValue[i] + (max - startValue[i]) * fraction),endValue[i]);
             }
 
             return chars;

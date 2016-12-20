@@ -78,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
         tv_ani.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                textViewWrapper.startAni("hellowolrd".toCharArray());
-                textViewWrapper.startAni(0,100);
+                textViewWrapper.startAni("HELLO WORLD".toCharArray());
+//                textViewWrapper.startAni(0,100);
 
             }
         });
